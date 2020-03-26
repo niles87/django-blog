@@ -1,0 +1,8 @@
+{% extends 'base_layout.html' %} {% block content %}
+<h1>sign up</h1>
+<form class="site-form" action="/accounts/signup/" method="POST">
+  <!-- need to send token back with form data -->
+  {% csrf_token %} {{ form }}
+  <input type="submit" value="Signup" />
+</form>
+{% endblock %}
